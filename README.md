@@ -1,1 +1,0 @@
-# pretix-simple-crm

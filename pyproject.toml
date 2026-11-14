@@ -1,0 +1,42 @@
+[project]
+name = "pretix-simple-crm"
+dynamic = ["version"]
+description = "Simple CRM system to track order baehavior o customers across"
+readme = "README.rst"
+license = {text = "Apache"}
+keywords = ["pretix"]
+authors = [
+    {name = "ski7777", email = "your-email@example.org"},
+]
+maintainers = [
+    {name = "ski7777", email = "your-email@example.org"},
+]
+
+dependencies = [
+]
+
+[project.entry-points."pretix.plugin"]
+pretix_simple_crm = "pretix_simple_crm:PretixPluginMeta"
+
+[project.entry-points."distutils.commands"]
+build = "pretix_plugin_build.build:CustomBuild"
+
+[build-system]
+requires = [
+    "setuptools",
+    "pretix-plugin-build",
+]
+
+[project.urls]
+homepage = "https://github.com/ski7777/pretix-simple-crm"
+repository = "https://github.com/ski7777/pretix-simple-crm"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = {attr = "pretix_simple_crm.__version__"}
+
+[tool.setuptools.packages.find]
+include = ["pretix*"]
+namespaces = false

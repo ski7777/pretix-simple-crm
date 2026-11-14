@@ -1,0 +1,5 @@
+[plugin]
+package = "pretix-simple-crm"
+modules = [ "pretix_simple_crm" ]
+marketplace_name = "simple-crm"
+
