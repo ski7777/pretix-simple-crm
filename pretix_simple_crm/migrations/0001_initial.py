@@ -114,7 +114,7 @@ class Migration(migrations.Migration):
                 ),
                 (
                     "item",
-                    models.ForeignKey(
+                    models.OneToOneField(
                         on_delete=django.db.models.deletion.CASCADE,
                         related_name="crm_sales_items",
                         to="pretixbase.item",

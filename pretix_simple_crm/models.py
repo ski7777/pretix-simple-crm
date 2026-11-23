@@ -29,7 +29,7 @@ class OrganizerSalesItemItem(models.Model):
         on_delete=models.CASCADE,
         related_name="items",
     )
-    item = models.ForeignKey(
+    item = models.OneToOneField(
         "pretixbase.Item",
         on_delete=models.CASCADE,
         related_name="crm_sales_items",
